@@ -35,6 +35,7 @@ const char *EC_constant_Gy = "483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c
 const char *formats[3] = {"publickey","rmd160","address"};
 const char *looks[2] = {"compress","uncompress"};
 
+void set_bit(char *param);
 void set_publickey(char *param,struct Point *publickey);
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst);
 void Scalar_Multiplication_custom(struct Point P, struct Point *R, mpz_t m);
