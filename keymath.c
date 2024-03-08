@@ -135,6 +135,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
+				int bitrange = strtol(param,NULL,10);
 				if(bitrange > 0 && bitrange <=130) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
