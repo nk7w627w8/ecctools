@@ -135,7 +135,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(str_publickey > 131 bits) {
+				if(str_publickey > 131) {
 					printf("Result: %s\n\n # wrong",str_publickey);
 				}
 				else {
