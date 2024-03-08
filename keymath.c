@@ -136,7 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(Point_Negation) {
+				if(Point_Addition(&A,&B,&C)) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
