@@ -115,14 +115,14 @@ int main(int argc, char **argv)  {
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
-				Scalar_Multiplication(G,&B,number);
+				Scalar_Multiplication(&B,number);
 			}
 			Point_Addition(&A,&B,&C);
 		
 		break;
 		case '-':
 			if(FLAG_NUMBER)	{
-				Scalar_Multiplication(G,&B,number);
+				Scalar_Multiplication(&B,number);
 			}
 			Point_Negation(&B,&C);
 			mpz_set(B.x,C.x);
@@ -137,7 +137,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(number % 2 == 1) {
+				if(FLAG_NUMBER % 2 == 1) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
