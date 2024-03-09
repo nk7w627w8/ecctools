@@ -124,7 +124,7 @@ int main(int argc, char **argv)  {
 			if(FLAG_NUMBER)	{
 				
 			}
-			Point_Addition(&A,&B,&C);
+			Point_Addition(&A,&B,&C,number);
 		
 		break;
 		case '-':
