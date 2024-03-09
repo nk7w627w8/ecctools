@@ -136,7 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(str_publickey > 130) {
+				if(EC.n / 2) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
@@ -155,7 +155,7 @@ int main(int argc, char **argv)  {
 		break;		
 	}
 	generate_strpublickey(&C,true,str_publickey);
-	gmp_printf("Result: %s\n\n # %d\n",str_publickey,number);	
+	printf("Result: %s\n\n",str_publickey);	
 }
 
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
