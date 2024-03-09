@@ -71,6 +71,8 @@ int main(int argc, char **argv)  {
 
 	mpz_init_set_ui(C.x,0);
 	mpz_init_set_ui(C.y,0);
+
+	mpz_init_set_ui(C,0);
 	
 	mpz_init(number);
 	mpz_init(inversemultiplier);
