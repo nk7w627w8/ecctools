@@ -112,6 +112,8 @@ int main(int argc, char **argv)  {
 	}
 	mpz_mod(number,number,EC.n);
 	mpz_mod(C,C,EC.n);
+	mpz_set_str(A,argv[1],0);
+	mpz_set_str(B,argv[3],0);
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
@@ -137,7 +139,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(str_publickey > set_publickey) {
+				if(str_publickey > 130) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
