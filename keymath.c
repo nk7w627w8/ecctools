@@ -111,9 +111,6 @@ int main(int argc, char **argv)  {
 		break;
 	}
 	mpz_mod(number,number,EC.n);
-	mpz_mod(C,C,EC.n);
-	mpz_set_str(A,argv[1],0);
-	mpz_set_str(B,argv[3],0);
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
@@ -158,7 +155,7 @@ int main(int argc, char **argv)  {
 		break;		
 	}
 	generate_strpublickey(&C,true,str_publickey);
-	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,C);	
+	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,str_publickey);	
 }
 
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
