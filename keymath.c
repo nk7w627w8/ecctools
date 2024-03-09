@@ -115,14 +115,21 @@ int main(int argc, char **argv)  {
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
-				Scalar_Multiplication(&B,number);
+				Scalar_Multiplication(G,&B,number);
+			}
+			Point_Addition(&A,&B,&C);
+		
+		break;
+		case '*':
+			if(FLAG_NUMBER)	{
+				
 			}
 			Point_Addition(&A,&B,&C);
 		
 		break;
 		case '-':
 			if(FLAG_NUMBER)	{
-				Scalar_Multiplication(&B,number);
+				Scalar_Multiplication(G,&B,number);
 			}
 			Point_Negation(&B,&C);
 			mpz_set(B.x,C.x);
