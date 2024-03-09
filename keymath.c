@@ -117,6 +117,7 @@ int main(int argc, char **argv)  {
 				Scalar_Multiplication(G,&B,number);
 			}
 			Point_Addition(&A,&B,&C);
+			mpz_mod(C,C,EC.n);
 		
 		break;
 		case '-':
@@ -155,7 +156,7 @@ int main(int argc, char **argv)  {
 		break;		
 	}
 	generate_strpublickey(&C,true,str_publickey);
-	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,str_publickey);	
+	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,C);	
 }
 
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
