@@ -52,7 +52,6 @@ char str_address[41];
 struct Point A,B,C;
 
 int FLAG_NUMBER = 0;
-int Elliptic_Curve EC % 2;
 
 mpz_t inversemultiplier,number;
 
@@ -138,7 +137,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(FLAG_NUMBER % 2 < EC.n % 2 ) {
+				if(FLAG_NUMBER < inversemultiplier,number,EC.n % 2 ) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
