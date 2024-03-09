@@ -156,7 +156,7 @@ int main(int argc, char **argv)  {
 		break;		
 	}
 	generate_strpublickey(&C,true,str_publickey);
-	printf("Result: %s\n\n # %Zd\n",str_publickey,C);	
+	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,C);	
 }
 
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
