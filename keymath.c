@@ -50,8 +50,6 @@ char str_address[41];
 
 struct Point A,B,C;
 
-mpz_t A,B,C;
-
 int FLAG_NUMBER = 0;
 
 mpz_t inversemultiplier,number;
@@ -121,7 +119,6 @@ int main(int argc, char **argv)  {
 				Scalar_Multiplication(G,&B,number);
 			}
 			Point_Addition(&A,&B,&C);
-			mpz_mod(C,C,EC.n);
 		
 		break;
 		case '-':
@@ -160,7 +157,7 @@ int main(int argc, char **argv)  {
 		break;		
 	}
 	generate_strpublickey(&C,true,str_publickey);
-	gmp_printf("Result: %s\n\n # %Zd\n",str_publickey,C);	
+	gmp_printf("Result: %s\n\n # %d\n",str_publickey,number);	
 }
 
 void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
