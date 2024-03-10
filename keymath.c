@@ -158,7 +158,7 @@ int main(int argc, char **argv)  {
 			
 			         Scalar_Multiplication(G,&B,number);
 			}
-			         mpz_invert(inversemultiplier,number,EC.n);
+			         mpz_invert(&A,&B,&C,inversemultiplier,number,EC.n);
 			         Scalar_Multiplication_custom(A,&C,inversemultiplier);
 			
 		break;
