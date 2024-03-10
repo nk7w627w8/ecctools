@@ -149,12 +149,12 @@ int main(int argc, char **argv)  {
 				printf("We don't know how to multiply 2 publickeys, we need an escalar number\n");
 				exit(0);
 			}
-			{
+			else {
 				Scalar_Multiplication_custom(A,&C,number);
 			}
 		break;
 		case '*':
-			if(FLAG_NUMBER)	{
+			if(!FLAG_NUMBER)	{
 			
 			
 			mpz_invert(inversemultiplier,number,EC.n);
