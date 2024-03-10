@@ -156,7 +156,7 @@ int main(int argc, char **argv)  {
 		case '/':
 			if(FLAG_NUMBER)	{
 			
-			
+			         Scalar_Multiplication(G,&B,number);
 			         mpz_invert(inversemultiplier,number,EC.n);
 			         Scalar_Multiplication_custom(A,&C,inversemultiplier);
 			}
