@@ -136,10 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				int len;
-	len = strlen(param);
-	dest = (char*) calloc(len+1,1);
-				if(FLAG_NUMBER % 2 == argv[1]) {
+				if(FLAG_NUMBER % 2 == 1) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
