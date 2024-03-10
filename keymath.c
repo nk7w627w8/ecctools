@@ -120,13 +120,6 @@ int main(int argc, char **argv)  {
 			Point_Addition(&A,&B,&C);
 		
 		break;
-		case '*':
-			if(FLAG_NUMBER)	{
-				
-			}
-			Point_Addition(&A,&B,&C,number);
-		
-		break;
 		case '-':
 			if(FLAG_NUMBER)	{
 				Scalar_Multiplication(G,&B,number);
