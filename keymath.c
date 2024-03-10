@@ -128,7 +128,7 @@ int main(int argc, char **argv)  {
 			mpz_set(B.y,C.y);
 			Point_Addition(&A,&B,&C);
 		break;
-		case '/':
+		case '*':
 			if(!FLAG_NUMBER)	{
 				printf("We don't know how to divide 2 publickeys, we need an escalar number\n");
 				exit(0);
@@ -153,12 +153,12 @@ int main(int argc, char **argv)  {
 				Scalar_Multiplication_custom(A,&C,number);
 			}
 		break;
-		case '*':
-			if(!FLAG_NUMBER)	{
+		case '/':
+			if(FLAG_NUMBER)	{
 			
 			
-			mpz_invert(inversemultiplier,number,EC.n);
-			Scalar_Multiplication_custom(A,&C,inversemultiplier);
+			         mpz_invert(inversemultiplier,number,EC.n);
+			         Scalar_Multiplication_custom(A,&C,inversemultiplier);
 			}
 		break;
 	}
