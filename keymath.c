@@ -157,9 +157,10 @@ int main(int argc, char **argv)  {
 			if(FLAG_NUMBER)	{
 			
 			         Scalar_Multiplication(G,&B,number);
+			}
 			         mpz_invert(inversemultiplier,number,EC.n);
 			         Scalar_Multiplication_custom(A,&C,inversemultiplier);
-			}
+			
 		break;
 	}
 	generate_strpublickey(&C,true,str_publickey);
