@@ -149,10 +149,19 @@ int main(int argc, char **argv)  {
 				printf("We don't know how to multiply 2 publickeys, we need an escalar number\n");
 				exit(0);
 			}
-			else	{
+			{
 				Scalar_Multiplication_custom(A,&C,number);
 			}
-		break;		
+		break;
+		case '*':
+			if(FLAG_NUMBER)	{
+				Scalar_Multiplication(G,&B,number);
+			}
+			
+			mpz_invert(inversemultiplier,number,EC.n);
+			Scalar_Multiplication_custom(A,&C,inversemultiplier);
+			
+		break;
 	}
 	generate_strpublickey(&C,true,str_publickey);
 	printf("Result: %s\n\n",str_publickey);	
