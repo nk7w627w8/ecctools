@@ -1,4 +1,3 @@
-ll
 /*
 Developed by Luis Alberto
 email: alberto.bsd@gmail.com
