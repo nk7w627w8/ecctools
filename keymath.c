@@ -1,4 +1,4 @@
-
+ll
 /*
 Developed by Luis Alberto
 email: alberto.bsd@gmail.com
@@ -137,7 +137,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(FLAG_NUMBER % 2 == argv[2][0]) {
+				if(FLAG_NUMBER == argv[2][0]) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
