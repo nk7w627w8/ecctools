@@ -157,7 +157,7 @@ int main(int argc, char **argv)  {
 			if(FLAG_NUMBER)	{
 			
 			
-			mpz_invert(inversemultiplier,number,EC.n);
+			mpz_invert(inversemultiplier,number,B,EC.n);
 			Scalar_Multiplication_custom(A,&C,inversemultiplier);
 			}
 		break;
