@@ -53,7 +53,7 @@ struct Point A,B,C;
 int FLAG_NUMBER = 0;
 int divide = 0;
 
-mpz_t inversemultiplier,number;
+mpz_t inversemultiplier,divide,number;
 
 int main(int argc, char **argv)  {
 	char buffer_input[1024];
