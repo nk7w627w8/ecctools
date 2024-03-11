@@ -54,6 +54,7 @@ int FLAG_NUMBER = 0;
 int FLAG_HIDECOMMENT = 0;
 
 mpz_t inversemultiplier,number;
+mpz_t base_key;
 
 int main(int argc, char **argv)  {
 	char buffer_input[1024];
