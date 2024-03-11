@@ -110,7 +110,7 @@ int main(int argc, char **argv)  {
 			FLAG_NUMBER = 1;
 		break;
 	}
-	mpz_mod(number,number,divide,EC.n);
+	mpz_mod(number,number,EC.n);
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
@@ -136,7 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if( G,&B,number) {
+				if( G,&B) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
