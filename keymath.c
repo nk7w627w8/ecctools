@@ -57,6 +57,7 @@ mpz_t inversemultiplier,number;
 
 int main(int argc, char **argv)  {
 	char buffer_input[1024];
+	char c;
 	mpz_init_set_str(EC.p, EC_constant_P, 16);
 	mpz_init_set_str(EC.n, EC_constant_N, 16);
 	mpz_init_set_str(G.x , EC_constant_Gx, 16);
