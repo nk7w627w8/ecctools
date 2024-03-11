@@ -52,7 +52,7 @@ struct Point A,B,C;
 
 int FLAG_NUMBER = 0;
 
-mpz_t inversemultiplier,divide,number;
+mpz_t inversemultiplier,number;
 
 int main(int argc, char **argv)  {
 	char buffer_input[1024];
@@ -136,7 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(divide number,EC.n) {
+				if( G,&B,number) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
