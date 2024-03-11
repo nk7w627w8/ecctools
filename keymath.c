@@ -50,7 +50,8 @@ char str_address[41];
 
 struct Point A,B,C;
 
-int FLAG_NUMBER = 1;
+int FLAG_NUMBER = 10;
+int c;
 
 mpz_t inversemultiplier,number;
 
