@@ -146,10 +146,10 @@ int main(int argc, char **argv)  {
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
 				if(FLAG_HIDECOMMENT) {
-					printf("Result: %s\n\n # right",str_publickey);
+					printf("Result: %s\n\n",str_publickey);
 				}
 				else {
-					printf("Result: %s\n\n # wrong",str_publickey);
+					printf("Result: %s\n\n # %Zd\n",str_publickey,base_key);
 				}
 			}
 		break;
