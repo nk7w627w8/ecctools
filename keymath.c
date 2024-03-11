@@ -50,8 +50,7 @@ char str_address[41];
 
 struct Point A,B,C;
 
-int FLAG_NUMBER = 10;
-int c;
+int FLAG_NUMBER = 0;
 
 mpz_t inversemultiplier,number;
 
@@ -137,7 +136,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(FLAG_NUMBER > str_publickey) {
+				if(argv % 2 == 0) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
