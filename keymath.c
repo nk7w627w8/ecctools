@@ -51,6 +51,7 @@ char str_address[41];
 struct Point A,B,C;
 
 int FLAG_NUMBER = 0;
+int FLAG_HIDECOMMENT = 0;
 
 mpz_t inversemultiplier,number;
 
@@ -74,6 +75,13 @@ int main(int argc, char **argv)  {
 	
 	mpz_init(number);
 	mpz_init(inversemultiplier);
+	while ((c = getopt(argc, argv, "x:")) != -1) {
+		switch(c) {
+			case 'x':
+				FLAG_HIDECOMMENT = 1;
+			break;
+		}
+	}
 	
 	if(argc < 4)	{
 		printf("Missing parameters\n");
@@ -136,7 +144,7 @@ int main(int argc, char **argv)  {
 			else	{
 				mpz_invert(inversemultiplier,number,EC.n);
 				Scalar_Multiplication_custom(A,&C,inversemultiplier);
-				if(argv[3] % 2 == 1) {
+				if(FLAG_HIDECOMMENT) {
 					printf("Result: %s\n\n # right",str_publickey);
 				}
 				else {
