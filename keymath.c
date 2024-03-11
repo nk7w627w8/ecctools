@@ -51,7 +51,6 @@ char str_address[41];
 struct Point A,B,C;
 
 int FLAG_NUMBER = 0;
-int divide = 0;
 
 mpz_t inversemultiplier,divide,number;
 
@@ -111,7 +110,7 @@ int main(int argc, char **argv)  {
 			FLAG_NUMBER = 1;
 		break;
 	}
-	mpz_mod(number,number,EC.n);
+	mpz_mod(number,number,divide,EC.n);
 	switch(argv[2][0])	{
 		case '+':
 			if(FLAG_NUMBER)	{
