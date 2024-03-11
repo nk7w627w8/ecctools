@@ -150,7 +150,7 @@ int main(int argc, char **argv)  {
 					printf("Result: %s\n\n",str_publickey);
 				}
 				else {
-					printf("Result: %s\n\n # %Zd\n",str_publickey,base_key);
+					printf("Result: %s\n\n # %d\n",str_publickey,base_key);
 				}
 			}
 		break;
