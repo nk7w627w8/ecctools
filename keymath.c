@@ -50,9 +50,6 @@ char str_address[41];
 
 struct Point A,B,C;
 
-int FLAG_NUMBER = 0;
-int FLAG_HIDECOMMENT = 0;
-
 mpz_t inversemultiplier,number;
 mpz_t base_key;
 
@@ -77,12 +74,7 @@ int main(int argc, char **argv)  {
 	
 	mpz_init(number);
 	mpz_init(inversemultiplier);
-	while ((c = getopt(argc, argv, "x:")) != -1) {
-		switch(c) {
-			case 'x':
-				FLAG_HIDECOMMENT = 1;
-			break;
-		}
+	
 	}
 	
 	if(argc < 4)	{
@@ -172,7 +164,7 @@ void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
 	memset(dst,0,131);
 	if(compress)	{
 		if(mpz_tstbit(publickey->y, 0) == 0)	{	// Even
-			gmp_snprintf (dst,67,"02%0.6Zx",publickey->x);
+			gmp_snprintf (dst,8,"02%0.6Zx",publickey->x);
 		}
 		else	{
 			gmp_snprintf(dst,67,"03%0.6Zx",publickey->x);
