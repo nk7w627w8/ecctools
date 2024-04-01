@@ -172,10 +172,10 @@ void generate_strpublickey(struct Point *publickey,bool compress,char *dst)	{
 	memset(dst,0,131);
 	if(compress)	{
 		if(mpz_tstbit(publickey->y, 0) == 0)	{	// Even
-			gmp_snprintf (dst,67,"02%0.64Zx",publickey->x);
+			gmp_snprintf (dst,67,"02%0.6Zx",publickey->x);
 		}
 		else	{
-			gmp_snprintf(dst,67,"03%0.64Zx",publickey->x);
+			gmp_snprintf(dst,67,"03%0.6Zx",publickey->x);
 		}
 	}
 	else	{
